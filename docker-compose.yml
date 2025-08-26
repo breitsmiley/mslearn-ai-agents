@@ -1,0 +1,20 @@
+services:
+  python:
+    image:  breitsmiley/ai102-python:0.0.2
+    container_name: mslearn-ai-agents-python
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Keep the container running so you can exec into it
+    command: ["bash", "-lc", "tail -f /dev/null"]
+    # Uncomment the following if you want to always have pip available with dependencies installed at startup
+    # command: ["bash", "-lc", "python --version && tail -f /dev/null"]
+    # Alternatively, you can install requirements interactively once inside the container, e.g.:
+    #   docker compose exec python bash -lc 'pip install -r Labfiles/02-build-ai-agent/Python/requirements.txt'
+
+# Usage:
+#   docker compose up -d
+#   docker compose exec python bash
+#   # Inside the container, run any of the lab scripts, for example:
+#   #   pip install -r Labfiles/02-build-ai-agent/Python/requirements.txt
+#   #   python Labfiles/02-build-ai-agent/Python/agent_done.py
