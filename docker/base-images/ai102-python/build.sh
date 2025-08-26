@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #-------------------------------
-VERSION=0.0.2
+VERSION=0.0.5
 DOCKER_REGISTRY_HOST="breitsmiley"
 IMAGE_NAME="ai102-python"
 BASIC_TAG_NAME="$DOCKER_REGISTRY_HOST/$IMAGE_NAME"
